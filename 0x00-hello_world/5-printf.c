@@ -1,7 +1,7 @@
 #inlude <stdio.h>
 /**
  * main - entey point
- * Retrun: Always 0 (success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {

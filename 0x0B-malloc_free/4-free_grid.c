@@ -2,18 +2,21 @@
 #include <stdlib.h>
 
 /**
- * free_grid - A function that frees a 2D array of integers.
- * created by your malloc_grid function
- * @grid: An input 2D array of integers to free
- * @height: height of grid
- * Return: NULL
+ * free_grid - This frees a DAM space
+ * @grid: This is the space to be freed
+ * @height: This is the size of the pointer space
+ *
+ * Return: Null void
  */
 void free_grid(int **grid, int height)
 {
-	int index;
+	int i;
 
-	for (index = 0; index < height; index++)
-		free(grid[index]);
-
+	for (i = 0; i < height; i++)
+	{
+		free(grid[i]);
+		grid[i] = NULL;
+	}
 	free(grid);
+	grid = NULL;
 }

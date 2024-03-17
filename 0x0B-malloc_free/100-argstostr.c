@@ -2,44 +2,47 @@
 #include <stdlib.h>
 
 /**
- * argstostr - Concatenates all arguments of the program into a string;
- *             arguments are separated by a new line in the string.
- * @ac: The number of arguments passed to the program.
- * @av: An array of pointers to the arguments.
+ * argstostr - Concatenates all the string of arguments
+ * @ac: This is argument count
+ * @av: This is argument vector
  *
- * Return: If ac == 0, av == NULL, or the function fails - NULL.
- *         Otherwise - a pointer to the new string.
+ * Return: A new string if successful, Null if otherwise
  */
 char *argstostr(int ac, char **av)
 {
+	int i, j, size, counter;
 	char *str;
-	int arg, byte, index, size = ac;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (arg = 0; arg < ac; arg++)
+	size = 0;
+	counter = 0;
+
+	for (i = 0; i < ac; i++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
 			size++;
+		}
+
 	}
-
-	str = malloc(sizeof(char) * size + 1);
-
+	size = size + (ac + 1);
+	str = malloc(size);
 	if (str == NULL)
 		return (NULL);
 
-	index = 0;
-
-	for (arg = 0; arg < ac; arg++)
+	for (i = 0; i < ac; i++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			str[index++] = av[arg][byte];
-
-		str[index++] = '\n';
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			str[counter] = av[i][j];
+			counter++;
+		}
+		str[counter] = '\n';
+		counter++;
 	}
-
-	str[size] = '\0';
+	str[counter] = '\0';
 
 	return (str);
 }

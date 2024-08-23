@@ -1,21 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - Entry mode
- * Return: Always 0 (Success)
+ * main - This program prints all decimal
+ * digits without using printf
+ * Return: Exit status is zero if successful
  */
 int main(void)
 {
-	int a;
+	int i;
 
-	for (a = '0'; a <= '9'; a++)
+	for (i = 48; i <= 57; i++)
 	{
-		putchar(a);
-		if (a != '9')
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		putchar(i);
+		if (i == 57)
+			break;
+		putchar(44);
+		putchar(32);
 	}
 	putchar('\n');
 	return (0);

@@ -2,19 +2,17 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - Entry point
- * @b: an unsigned integer
+ * malloc_checked - Allocating memory
+ * @b: This is the number of bytes to be malloced
  *
- * Return: Nothing to return
+ * Return: void pointer
  */
 void *malloc_checked(unsigned int b)
 {
-	void *prt;
+	void *ptr;
 
-	prt = malloc(b);
-	if (prt == NULL)
-	{
+	ptr = malloc(b);
+	if (ptr == NULL)
 		exit(98);
-	}
-	return (prt);
+	return (ptr);
 }

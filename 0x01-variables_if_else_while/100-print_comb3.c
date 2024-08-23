@@ -1,25 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - entry mode
- * Return: Always 0
+ * main - This program prints all decimal
+ * digits without using printf
+ * Return: Exit status is zero if successful
  */
 int main(void)
 {
-	int a, b;
+	int i;
+	int j;
 
-	for (a = '0'; a <= '8'; a++)
+	for (i = 48; i <= 57; i++)
 	{
-		for (b = a + 1; b <= '9'; b++)
+		for (j = i + 1; j <= 57; j++)
 		{
-			if (a == b)
-				continue;
-			putchar(a);
-			putchar(b);
-			if (a == '8' && b == '9')
-				continue;
-			putchar(',');
-			putchar(' ');
+			putchar(i);
+			putchar(j);
+			if ((j == 57) && (i == 56))
+				break;
+			putchar(44);
+			putchar(32);
 		}
 	}
 	putchar('\n');

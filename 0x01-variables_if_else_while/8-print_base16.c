@@ -1,17 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - Entry mode
- * Return: Always 0 (Success)
+ * main - This program prints a-z to std output
+ * Return: Exit status is zero if successful
  */
 int main(void)
 {
-	char n;
+	int i;
 
-	for (n = '0'; n <= '9'; n++)
-		putchar(n);
-	for (n = 'a'; n <= 'f'; n++)
-		putchar(n);
+	for (i = 48; i <= 57; i++)
+	{
+		putchar(i);
+	}
+	for (i = 97; i <= 102; i++)
+	{
+		putchar(i);
+	}
 	putchar('\n');
 	return (0);
 }

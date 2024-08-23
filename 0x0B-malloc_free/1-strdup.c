@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
- * _strdup - Entry point
- * @str: a char
- * Return: the result
+ * _strdup - return a pointer to a new string that duplicate the string
+ * @str: string to be copied
+ *
+ * Return: Pointer to the string
  */
 char *_strdup(char *str)
 {
@@ -16,8 +17,9 @@ char *_strdup(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		continue;
+
 	i++;
-	s = malloc(i * sizeof(char));
+	s = malloc(sizeof(char) * i);
 	if (s == NULL)
 		return (NULL);
 

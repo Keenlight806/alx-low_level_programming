@@ -1,4 +1,3 @@
-
 #include "lists.h"
 
 /**
@@ -8,6 +7,7 @@
  *
  * Description: Sets the head to NULL.
  */
+
 void free_listint2(listint_t **head)
 {
 	listint_t *tmp;
@@ -17,10 +17,9 @@ void free_listint2(listint_t **head)
 
 	while (*head)
 	{
-		tmp = (*head)->next;
-		free(*head);
-		*head = tmp;
+		tmp = *head;
+		*head = (*head)->next;
+		free(tmp);
 	}
-
 	head = NULL;
 }

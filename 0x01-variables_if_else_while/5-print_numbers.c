@@ -1,15 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - entry mode
- * Return: Always 0 (Success)
+ * main - This program prints all decimal numbers
+ * Return: Exit status is zero if successful
  */
 int main(void)
 {
-	char num;
+	int i;
 
-	for (num = 0; num < 10; num++)
-		printf("%d", num);
-	putchar('\n');
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d", i);
+	}
+	printf("\n");
 	return (0);
 }

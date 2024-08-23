@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 /**
- * new_dog - function
+ * new_dog - This creates a new dog instance from the struct dog
  * @name: The name of the dog
- * @age: the age of the dog
- * @owner: The name of the owner of the dog
- * Return: NULL
+ * @age: The age of the dog
+ * @owner: The owner of the dog
+ *
+ * Return: The pointer to a new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -14,7 +15,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *new_dog = malloc(sizeof(dog_t));
 
 	if (new_dog == NULL)
+	{
 		return (NULL);
+	}
 
 	name_size = sizeof(name) + 1;
 	owner_size = sizeof(owner) + 1;

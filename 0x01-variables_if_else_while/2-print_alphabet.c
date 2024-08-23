@@ -1,17 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
 /**
- * main - entry mode
- * Return: Always 0 (Success)
+ * main - Entry point
+ *
+ * Return: Always 0 (success)
  */
+
 int main(void)
 {
-	char a;
+	char low;
 
-	for (a = 'a'; a <= 'z'; a++)
+	for (low = 'a'; low <= 'z'; low++)
 	{
-		putchar(a);
+		putchar(low);
 	}
-		putchar('\n');
+	putchar('\n');
+
 	return (0);
 }

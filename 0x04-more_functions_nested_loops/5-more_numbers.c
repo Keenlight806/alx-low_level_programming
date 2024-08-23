@@ -1,24 +1,26 @@
 #include "main.h"
 
 /**
- * more_numbers -  checks for checks for a digit (0 through 9).
- * Return: Always 0.
+ * more_numbers - priint more
+ *
+ * Return: 0
  */
+
 void more_numbers(void)
 {
-	int a, b;
+	int count;
+	int n;
 
-	for (a = 0; a < 10; a++)
+	for (count = 0; count < 10; count++)
 	{
-		for (b = 0; b < 15; b++)
+		for (n = 0; n <= 14; n++)
 		{
-			if (b / 10 != 0)
+			if (n > 9)
 			{
-				_putchar(b / 10 + '0');
+				_putchar((n / 10) + '0');
 			}
-			_putchar(b % 10 + '0');
+			_putchar((n % 10) + '0');
 		}
 		_putchar('\n');
 	}
 }
-

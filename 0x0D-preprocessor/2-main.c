@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints the name of whatever file runs this code
  *
- * Return: Always 0
+ * Return: Null Void
  */
 int main(void)
 {
-	printf("%s\n", __FILE__);
+	printf("%s\n", __BASE_FILE__);
 	return (0);
 }

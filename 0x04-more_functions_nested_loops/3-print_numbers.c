@@ -1,17 +1,18 @@
 #include "main.h"
 
 /**
- * print_numbers -  checks for checks for a digit (0 through 9).
- *
- * Return: Always 0.
+ * print_numbers - print num from zero to 9
+ * Return: 0
  */
+
+
 void print_numbers(void)
 {
-	int a;
+	int n;
 
-	for (a = 48; a < 58; a++)
+	for (n = 0; n <= 9; n++)
 	{
-		_putchar(a);
+		_putchar((n % 10) + '0');
 	}
 	_putchar('\n');
 }

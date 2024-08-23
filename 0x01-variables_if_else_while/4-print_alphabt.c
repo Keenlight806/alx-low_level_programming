@@ -1,20 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - entry mode
- * Return: Always 0 (Success)
+ * main - Prints the alphabet except the letters q and e.
+ *
+ * Return: Always 0 (success)
  */
+
 int main(void)
 {
-	char alph;
+	int i;
 
-	for (alph = 'a'; alph <= 'z'; alph++)
+	for (i = 97; i <= 122; i++)
 	{
-		if (alph == 'q' || alph == 'e')
-		{
-			continue;
-		}
-		putchar(alph);
+		if (!(i == 113 || i == 101))
+			putchar(i);
 	}
 	putchar('\n');
 	return (0);

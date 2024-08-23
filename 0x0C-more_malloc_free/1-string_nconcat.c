@@ -1,16 +1,18 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * string_nconcat - Entry poiny
- * @s1: a character
- * @s2: a character
- * @n: an int
- * Return: the result
+ * string_nconcat - Concats 2 strings up to a no of bytes
+ * @s1: The first string
+ * @s2: The second string
+ * @n: The cap
+ *
+ * Return: A pointer to a string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
+	char *newString;
 	unsigned int size1, size2, i, j;
 
 	if (s1 == NULL)
@@ -27,17 +29,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > size2)
 		n = size2;
 
-	str = malloc(size1 + n + 1);
-	if (str == NULL)
+	newString = malloc(size1 + n + 1);
+	if (newString == NULL)
 		return (NULL);
 
 	for (i = 0; s1[i] != '\0'; i++)
-		str[i] = s1[i];
+		newString[i] = s1[i];
 
 	for (j = 0; j < n; j++, i++)
-		str[i] = s2[j];
+	{
+		newString[i] = s2[j];
+	}
+	newString[i] = '\0';
 
-	str[i] = '\0';
-
-	return (str);
+	return (newString);
 }

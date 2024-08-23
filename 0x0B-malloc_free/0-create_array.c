@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * create_array - Entry point
- * @size: unsigned int
- * @c: a character
- * Return: the result
+ * create_array - Creates an array and assigns it values
+ * @size: This is the size of the array
+ * @c: This is the char it should be filled with
+ *
+ * Return: Null if no memory or a pointer to the array
  */
 char *create_array(unsigned int size, char c)
 {
@@ -16,7 +17,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 
 	i = 0;
-	a = malloc(size * sizeof(c));
+	a = malloc(sizeof(c) * size);
 	if (a == NULL)
 		return (NULL);
 	while (i < size)
@@ -24,5 +25,6 @@ char *create_array(unsigned int size, char c)
 		a[i] = c;
 		i++;
 	}
+
 	return (a);
 }

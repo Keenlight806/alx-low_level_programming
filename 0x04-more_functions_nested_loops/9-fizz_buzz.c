@@ -1,15 +1,11 @@
 #include <stdio.h>
-
 #include "main.h"
 
 /**
- * main - entry point
- * Context: prints the numbers 1 - 100
- * Fizz for multiples of 3, Buzz for multiples of 5,
- * & FizzBuzz for multiples of both
- * Return: Always 0.
+ * main - Fizz buszz challenge
+ *
+ * Return: 0
  */
-
 int main(void)
 {
 	int i;
@@ -17,17 +13,30 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 15 == 0)
-			printf("FizzBuzz");
+		{
+			printf("FizzBuzz ");
+		}
 		else if (i % 3 == 0)
-			printf("Fizz");
+		{
+			printf("Fizz ");
+		}
 		else if (i % 5 == 0)
-			printf("Buzz");
-		else 
-			printf("%i", i);
-		if (i < 100)
-			printf(" ");
+		{
+			if (i == 100)
+			{
+				printf("Buzz");
+			}
+			else
+			{
+				printf("Buzz ");
+			}
+		}
+		else
+		{
+			printf("%d ", i);
+		}
 	}
 	printf("\n");
+
 	return (0);
 }
-	

@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - prints the number of arguments passed into it.
  * @argc: argument count
- * @argv: argument vector
- * Return: Always 0
+ * @argv: arguments
+ *
+ * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	(void)argv;
 
